@@ -8,8 +8,10 @@ namespace MoreWeapons.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("$Mods.MoreWeapons.Items.BasicSword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("$Mods.MoreWeapons.Items.BasicSwordDesc");
+			DisplayName.SetDefault("Basic Sword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			DisplayName.AddTranslation((int)GameCulture.CultureName.Chinese, "长剑");
+			Tooltip.SetDefault("The long road is slow, only the sword is the companion.");
+			Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "长路慢慢，惟剑作伴。");
 		}
 
 		public override void SetDefaults()
@@ -20,7 +22,7 @@ namespace MoreWeapons.Items
 			Item.height = 40;
 			Item.useTime = 20;
 			Item.useAnimation = 20;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.value = 10000;
 			Item.crit = 60;

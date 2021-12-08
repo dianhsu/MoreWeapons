@@ -1,8 +1,0 @@
-﻿Mods: {
-	MoreWeapons:{
-		Items: {
-			BasicSword: "长剑"
-			BasicSwordDesc: "这是一把普通的长剑"
-		}
-	}
-}

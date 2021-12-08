@@ -11,13 +11,15 @@ namespace MoreWeapons
 {
     public class ReciptsModify: ModSystem
     {
-
+        
         public override void AddRecipes()
         {
             Recipe recipe = Mod.CreateRecipe(ItemID.TargetDummy);
             recipe.AddIngredient(ItemID.Wood, 2);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
+
+            Mod.CreateRecipe(ItemID.Zenith).AddTile(TileID.WorkBenches).AddIngredient(ModContent.ItemType<Items.BasicSword>()).Register();
         }
     }
 }

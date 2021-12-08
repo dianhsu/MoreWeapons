@@ -1,8 +1,0 @@
-﻿Mods: {
-	MoreWeapons:{
-		Items: {
-			BasicSword: Basic Sword
-			BasicSwordDesc: This is a basic sword.
-		}
-	}
-}
