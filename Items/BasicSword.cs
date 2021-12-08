@@ -1,15 +1,15 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-
+using Terraria.Localization;
 namespace MoreWeapons.Items
 {
 	public class BasicSword : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("BasicSword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("This is a basic modded sword.");
+			DisplayName.SetDefault("$Mods.MoreWeapons.Items.BasicSword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			Tooltip.SetDefault("$Mods.MoreWeapons.Items.BasicSwordDesc");
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,8 @@ namespace MoreWeapons.Items
 			Item.useStyle = 1;
 			Item.knockBack = 6;
 			Item.value = 10000;
-			Item.rare = 2;
+			Item.crit = 60;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 		}
@@ -31,7 +32,7 @@ namespace MoreWeapons.Items
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.DirtBlock, 10);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}
